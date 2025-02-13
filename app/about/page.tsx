@@ -12,7 +12,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative h-[400px]">
         <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
+          src="/images/jpg_new/22.jpg"
           alt="Office Meeting"
           fill
           className="object-cover brightness-50"
@@ -107,7 +107,7 @@ export default function About() {
             <Card className="p-6">
               <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                  src="/images/design_png/4.png"
                   alt="CEO"
                   fill
                   className="object-cover"
@@ -122,7 +122,7 @@ export default function About() {
             <Card className="p-6">
               <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+                  src="/images/design_png/50.png"
                   alt="CFO"
                   fill
                   className="object-cover"
@@ -137,7 +137,7 @@ export default function About() {
             <Card className="p-6">
               <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
+                  src="/images/design_png/3.png"
                   alt="CTO"
                   fill
                   className="object-cover"

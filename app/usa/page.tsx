@@ -5,24 +5,31 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Briefcase, Calculator, DollarSign, FileText, PieChart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 const services = [
   {
     title: "Bookkeeping & Accounting",
     icon: <FileText className="h-12 w-12 text-primary mb-4" />, 
     items: [
-      "Data Entry", "Invoice Processing", "Accounts Receivable Management", 
-      "Bank & Credit Card Reconciliation", "Inventory Management", "Fixed Assets Management", 
-      "Loan Account Reconciliation", "Year End Finalization"
+      "Data Entry",
+      "Invoice Processing",
+      "Accounts Receivable Management",
+      "Bank & Credit Card Reconciliation",
+      "Inventory Management",
+      "Fixed Assets Management",
+      "Loan Account Reconciliation",
+      "Year End Finalization"
     ],
   },
   {
     title: "Financial Statements",
     icon: <PieChart className="h-12 w-12 text-primary mb-4" />,
     items: [
-      "Preparation of Financial Statements", "SEC Financial Statements Compliance", 
-      "Annual Financial Reporting Support (10-K)", "Quarterly Financial Reporting Support (10-Q)", 
+      "Preparation of Financial Statements",
+      "SEC Financial Statements Compliance",
+      "Annual Financial Reporting Support (10-K)",
+      "Quarterly Financial Reporting Support (10-Q)",
       "SEC Audit and Support"
     ],
   },
@@ -30,7 +37,9 @@ const services = [
     title: "Taxation",
     icon: <Calculator className="h-12 w-12 text-primary mb-4" />,
     items: [
-      "Personal Income Tax Returns for Individuals", "Tax Preparation for Business", "Tax Planning"
+      "Personal Income Tax Returns for Individuals",
+      "Tax Preparation for Business",
+      "Tax Planning"
     ],
   },
   {
@@ -39,11 +48,6 @@ const services = [
     items: ["Compilation", "Review", "Audit", "Agreed-upon Procedures"],
   }
 ];
-
-
-
-
-
 
 export default function USAServices() {
   return (
@@ -70,43 +74,37 @@ export default function USAServices() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our North American Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="p-6 flex flex-col h-full">
-                {service.icon}
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <ul className="space-y-3 mb-6 flex-grow">
-                  {service.items.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <ArrowRight className="h-4 w-4 text-primary" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button className="w-full mt-auto" asChild>
-                  <Link href="/contact">Get Started</Link>
-                </Button>
-              </Card>
-            ))}
+      <ScrollReveal>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Our North American Services</h2>
+            <div className="grid lg:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <Card key={index} className="group relative overflow-hidden p-8 hover:shadow-lg transition-all duration-300">
+                  <div className="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-blue-600 to-blue-400"></div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="rounded-lg bg-blue-50 p-3">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold">{service.title}</h3>
+                  </div>
+                  <ul className="space-y-4 mb-8">
+                    {service.items.map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 group-hover:translate-x-2 transition-transform duration-300" style={{ transitionDelay: `${i * 50}ms` }}>
+                        <ArrowRight className="h-4 w-4 text-blue-600" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full mt-auto bg-blue-600 hover:bg-blue-700" asChild>
+                    <Link href="/contact">Get Started</Link>
+                  </Button>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-       
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Optimize Your Finances?</h2>
-          <p className="mb-8 text-lg opacity-90">
-            Get in touch for a comprehensive review of your accounting and tax needs.
-          </p>
-          <Button size="lg" variant="secondary" asChild>
-            <Link href="/contact">Schedule a Consultation</Link>
-          </Button>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Features Section */}
       <section className="py-20 bg-secondary">

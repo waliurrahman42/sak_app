@@ -77,7 +77,7 @@ export default function Home() {
 
       {/* Services Overview */}
       <ScrollReveal>
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-b from-white to-primary/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Global Services</h2>
@@ -86,110 +86,99 @@ export default function Home() {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-  {/* UAE Services */}
-  <div className="group bg-card p-8 rounded-xl shadow-lg border hover:shadow-2xl transition-all duration-300 hover-lift h-full flex flex-col">
-    <div className="flex items-center gap-3 mb-6">
-      <Building2 className="h-10 w-10 text-primary animate-float" />
-      <h3 className="text-2xl font-bold">UAE Services</h3>
-    </div>
-    <div className="flex-grow">
-      <ul className="space-y-4 mb-8">
-        <li className="flex items-center gap-3 animate-slide-right">
-          <Shield className="h-5 w-5 text-primary" />
-          <span>Business setup, Licensing, Visa and banking support</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-100">
-          <Wallet className="h-5 w-5 text-primary" />
-          <span>Book Keeping and accounting services, financial statements</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-200">
-          <Users className="h-5 w-5 text-primary" />
-          <span>Corporate Tax and VAT</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-200">
-          <Users className="h-5 w-5 text-primary" />
-          <span>Management/Business consulting</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-200">
-          <Users className="h-5 w-5 text-primary" />
-          <span>Audit and Other Services</span>
-        </li>
-      </ul>
-    </div>
-    <Button className="w-full h-12 text-lg group-hover:scale-105 transition-transform mt-auto" asChild>
-      <Link href="/uae">
-        Explore UAE Services
-        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-      </Link>
-    </Button>
-  </div>
+              {/* UAE Services */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div className="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-primary to-primary/50"></div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="rounded-lg bg-primary/10 p-3">
+                    <Building2 className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold">UAE Services</h3>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform">
+                    <Shield className="h-5 w-5 text-primary" />
+                    <span>Business setup & Licensing</span>
+                  </li>
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform delay-75">
+                    <Wallet className="h-5 w-5 text-primary" />
+                    <span>Accounting & Financial statements</span>
+                  </li>
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform delay-100">
+                    <Users className="h-5 w-5 text-primary" />
+                    <span>Corporate Tax and VAT</span>
+                  </li>
+                </ul>
+                <Button className="w-full h-12 group" asChild>
+                  <Link href="/uae">
+                    Explore UAE Services
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
 
-  {/* USA/Canada Services */}
-  <div className="group bg-card p-8 rounded-xl shadow-lg border hover:shadow-2xl transition-all duration-300 hover-lift h-full flex flex-col">
-    <div className="flex items-center gap-3 mb-6">
-      <Globe2 className="h-10 w-10 text-primary animate-float" />
-      <h3 className="text-2xl font-bold">USA/Canada Services</h3>
-    </div>
-    <div className="flex-grow">
-      <ul className="space-y-4 mb-8">
-        <li className="flex items-center gap-3 animate-slide-right">
-          <Shield className="h-5 w-5 text-primary" />
-          <span>Book Keeping and accounting services</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-100">
-          <Wallet className="h-5 w-5 text-primary" />
-          <span>Preparation of financial statements</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-200">
-          <Users className="h-5 w-5 text-primary" />
-          <span>Tax returns preparation and filing for individual and corporate</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-200">
-          <Users className="h-5 w-5 text-primary" />
-          <span>Audit Services/Supports</span>
-        </li>
-      </ul>
-    </div>
-    <Button className="w-full h-12 text-lg group-hover:scale-105 transition-transform mt-auto" asChild>
-      <Link href="/usa">
-        Explore USA/Canada Services
-        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-      </Link>
-    </Button>
-  </div>
+              {/* USA/Canada Services */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div className="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-blue-600 to-blue-400"></div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="rounded-lg bg-blue-50 p-3">
+                    <Globe2 className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold">USA/Canada</h3>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform">
+                    <Shield className="h-5 w-5 text-blue-600" />
+                    <span>Tax Planning & Preparation</span>
+                  </li>
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform delay-75">
+                    <Wallet className="h-5 w-5 text-blue-600" />
+                    <span>Financial Statements</span>
+                  </li>
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform delay-100">
+                    <Users className="h-5 w-5 text-blue-600" />
+                    <span>Business Advisory</span>
+                  </li>
+                </ul>
+                <Button className="w-full h-12 group bg-blue-600 hover:bg-blue-700" asChild>
+                  <Link href="/usa">
+                    Explore USA/Canada Services
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
 
-  {/* India Services */}
-  <div className="group bg-card p-8 rounded-xl shadow-lg border hover:shadow-2xl transition-all duration-300 hover-lift h-full flex flex-col">
-    <div className="flex items-center gap-3 mb-6">
-      <Building2 className="h-10 w-10 text-primary animate-float" />
-      <h3 className="text-2xl font-bold">India Services</h3>
-    </div>
-    <div className="flex-grow">
-      <ul className="space-y-4 mb-8">
-        <li className="flex items-center gap-3 animate-slide-right">
-          <Shield className="h-5 w-5 text-primary" />
-          <span>GST Services</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-100">
-          <Wallet className="h-5 w-5 text-primary" />
-          <span>Income Tax</span>
-        </li>
-        <li className="flex items-center gap-3 animate-slide-right animate-delay-200">
-          <Users className="h-5 w-5 text-primary" />
-          <span>Company Formation</span>
-        </li>
-      </ul>
-    </div>
-    <Button className="w-full h-12 text-lg group-hover:scale-105 transition-transform mt-auto" asChild>
-      <Link href="/india">
-        Explore India Services
-        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-      </Link>
-    </Button>
-  </div>
-</div>
-
-           
+              {/* India Services */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div className="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-orange-600 to-orange-400"></div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="rounded-lg bg-orange-50 p-3">
+                    <Building2 className="h-8 w-8 text-orange-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold">India Services</h3>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform">
+                    <Shield className="h-5 w-5 text-orange-600" />
+                    <span>GST Services</span>
+                  </li>
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform delay-75">
+                    <Wallet className="h-5 w-5 text-orange-600" />
+                    <span>Income Tax</span>
+                  </li>
+                  <li className="flex items-center gap-3 group-hover:translate-x-2 transition-transform delay-100">
+                    <Users className="h-5 w-5 text-orange-600" />
+                    <span>Company Formation</span>
+                  </li>
+                </ul>
+                <Button className="w-full h-12 group bg-orange-600 hover:bg-orange-700" asChild>
+                  <Link href="/india">
+                    Explore India Services
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
       </ScrollReveal>
@@ -231,29 +220,7 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
-      {/* Client Testimonials */}
-      {/* <ScrollReveal>
-        <TestimonialsSection />
-      </ScrollReveal> */}
-
-      {/* Our Clients */}
-      {/* <ScrollReveal>
-        <ClientsSection />
-      </ScrollReveal> */}
-
-      {/* <ScrollReveal>
-        <Image
-          src="/images/footer_img1.jpg"
-          alt="Modern Business District"
-          fill
-          className="object-cover brightness-50"
-          priority
-          quality={100}
-        />
-      </ScrollReveal>
-       */}
-
-       {/* Featured Image Section */}
+      {/* Featured Image Section */}
       <ScrollReveal>
         <section className="py-5">
           <div className="container mx-auto ">

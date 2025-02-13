@@ -5,6 +5,62 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Building2, Calculator, ClipboardList, LineChart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { ScrollReveal } from "@/components/scroll-reveal";
+
+const services = [
+  {
+    title: "Book Keeping and Accounting Services",
+    icon: <Building2 className="h-12 w-12 text-primary mb-4" />, 
+    services: [
+      "Book Keeping and Accounting",
+      "Preparation of financial statements",
+      "Management Accounting",
+      "Budgeting and forecasting",
+      "Internal controls",
+    ],
+    link: "/contact",
+    buttonText: "Consult Now",
+  },
+  {
+    title: "Corporate Tax & VAT",
+    icon: <Calculator className="h-12 w-12 text-primary mb-4" />, 
+    services: [
+      "Corporate tax / VAT registration and compliance",
+      "Corporate tax / VAT Audit filing",
+      "Corporate tax / VAT planning and Advisory",
+      "Corporate tax / VAT Audit support",
+      "VAT refund assistance",
+    ],
+    link: "/contact",
+    buttonText: "Get Started",
+  },
+  {
+    title: "Management & Business Consulting",
+    icon: <LineChart className="h-12 w-12 text-primary mb-4" />, 
+    services: [
+      "Preparation of Management reports (MIS)",
+      "Strategic Planning",
+      "Project report",
+      "Valuation report",
+      "Business Process Optimization",
+      "Market Entry Strategy",
+      "Risk Management",
+      "Performance improvement",
+    ],
+    link: "/contact",
+    buttonText: "Consult Now",
+  },
+  {
+    title: "Audit and Other Services",
+    icon: <ClipboardList className="h-12 w-12 text-primary mb-4" />, 
+    services: [
+      "Audit services including Internal Audit",
+      "Agreed Upon procedures",
+    ],
+    link: "/contact",
+    buttonText: "Learn More",
+  },
+];
 
 export default function UAEServices() {
   return (
@@ -31,85 +87,40 @@ export default function UAEServices() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Services in UAE</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Book Keeping and Accounting Services",
-                icon: <Building2 className="h-12 w-12 text-primary mb-4" />, 
-                services: [
-                  "Book Keeping and Accounting",
-                  "Preparation of financial statements",
-                  "Management Accounting",
-                  "Budgeting and forecasting",
-                  "Internal controls",
-                ],
-                link: "/contact",
-                buttonText: "Consult Now",
-              },
-              {
-                title: "Corporate Tax & VAT",
-                icon: <Calculator className="h-12 w-12 text-primary mb-4" />, 
-                services: [
-                  "Corporate tax / VAT registration and compliance",
-                  "Corporate tax / VAT Audit filing",
-                  "Corporate tax / VAT planning and Advisory",
-                  "Corporate tax / VAT Audit support",
-                  "VAT refund assistance",
-                ],
-                link: "/contact",
-                buttonText: "Get Started",
-              },
-              {
-                title: "Management & Business Consulting",
-                icon: <LineChart className="h-12 w-12 text-primary mb-4" />, 
-                services: [
-                  "Preparation of Management reports (MIS)",
-                  "Strategic Planning",
-                  "Project report",
-                  "Valuation report",
-                  "Business Process Optimization",
-                  "Market Entry Strategy",
-                  "Risk Management",
-                  "Performance improvement",
-                ],
-                link: "/contact",
-                buttonText: "Consult Now",
-              },
-              {
-                title: "Audit and Other Services",
-                icon: <ClipboardList className="h-12 w-12 text-primary mb-4" />, 
-                services: [
-                  "Audit services including Internal Audit",
-                  "Agreed Upon procedures",
-                ],
-                link: "/contact",
-                buttonText: "Learn More",
-              },
-            ].map((service, index) => (
-              <Card key={index} className="p-6 flex flex-col justify-between h-full">
-                <div>
-                  {service.icon}
-                  <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <ul className="space-y-3 mb-6">
+      <ScrollReveal>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Our Services in UAE</h2>
+            <div className="grid lg:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <Card key={index} className="group relative overflow-hidden p-8 hover:shadow-lg transition-all duration-300">
+                  <div className="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-primary to-primary/50"></div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="rounded-lg bg-primary/10 p-3">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold">{service.title}</h3>
+                  </div>
+                  <ul className="space-y-4 mb-8">
                     {service.services.map((item, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <ArrowRight className="h-4 w-4 text-primary" />
-                        <span>{item}</span>
+                      <li key={i} className="flex items-center gap-3 group-hover:translate-x-2 transition-transform duration-300" style={{ transitionDelay: `${i * 50}ms` }}>
+                        <ArrowRight className="h-5 w-5 text-primary" />
+                        <span className="text-muted-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-                <Button className="w-full" asChild>
-                  <Link href={service.link}>{service.buttonText}</Link>
-                </Button>
-              </Card>
-            ))}
+                  <Button className="w-full mt-auto" asChild>
+                    <Link href={service.link}>
+                      {service.buttonText}
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
+                    </Link>
+                  </Button>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-secondary">
