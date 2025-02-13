@@ -13,7 +13,7 @@ export default function Contact() {
       <HeroSection
         title="Contact Us"
         subtitle="Get in touch with our team of experts today"
-        imageUrl="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80"
+        imageUrl="/images/image_1.jpg"
         imageAlt="Modern Office"
       />
 
