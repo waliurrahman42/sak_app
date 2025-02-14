@@ -8,33 +8,33 @@ import {
   NavigationMenuTrigger,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
-import { Calculator, FileText, DollarSign, PieChart } from "lucide-react";
+import { Calculator, FileText, DollarSign, PieChart, ClipboardList } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    title: "Tax Services",
-    description: "Comprehensive tax planning and preparation",
-    icon: Calculator,
-    href: "/usa/tax-services",
-  },
-  {
-    title: "Bookkeeping",
-    description: "Professional bookkeeping and accounting",
+    title: "Bookkeeping & Accounting",
+    description: "Comprehensive bookkeeping and financial management",
     icon: FileText,
     href: "/usa/bookkeeping",
   },
   {
-    title: "Payroll Processing",
-    description: "Complete payroll management solutions",
+    title: "Financial Statements",
+    description: "SEC compliant financial reporting services",
     icon: DollarSign,
-    href: "/usa/payroll",
+    href: "/usa/financial-reporting",
   },
   {
-    title: "Financial Reporting",
-    description: "Detailed financial statements and analysis",
-    icon: PieChart,
-    href: "/usa/financial-reporting",
+    title: "Taxation",
+    description: "Tax preparation and planning services",
+    icon: Calculator,
+    href: "/usa/tax-services",
+  },
+  {
+    title: "Audit Support",
+    description: "Professional audit and assurance services",
+    icon: ClipboardList,
+    href: "/usa/audit-support",
   },
 ];
 

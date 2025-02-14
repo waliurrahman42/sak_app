@@ -8,33 +8,33 @@ import {
   NavigationMenuTrigger,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
-import { Calculator, FileText, Users, Building2 } from "lucide-react";
+import { Calculator, FileText, Users, Building2, ClipboardList } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    title: "VAT Services",
-    description: "Expert VAT consulting and compliance solutions",
-    icon: Calculator,
-    href: "/uae/vat-services",
-  },
-  {
-    title: "Accounting Services",
-    description: "Comprehensive bookkeeping and financial reporting",
+    title: "Bookkeeping & Accounting",
+    description: "Comprehensive bookkeeping and financial reporting services",
     icon: FileText,
     href: "/uae/accounting-services",
   },
   {
-    title: "Business Setup",
-    description: "Complete UAE business establishment services",
-    icon: Building2,
-    href: "/uae/business-setup",
+    title: "Corporate Tax & VAT",
+    description: "Expert tax consulting and compliance solutions",
+    icon: Calculator,
+    href: "/uae/tax-services",
   },
   {
     title: "Management Consulting",
     description: "Strategic business advisory services",
     icon: Users,
     href: "/uae/management-consulting",
+  },
+  {
+    title: "Audit Services",
+    description: "Professional audit and assurance services",
+    icon: ClipboardList,
+    href: "/uae/audit-services",
   },
 ];
 
